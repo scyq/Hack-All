@@ -4,5 +4,5 @@
 font_path = "res://Assets/Font/Staatliches-Regular.ttf"
 
 [resource]
-size = 120
+size = 50
 font_data = SubResource( 1 )

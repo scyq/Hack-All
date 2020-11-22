@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Assets/Font/font.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Assets/white.png" type="Texture" id=2]
+[ext_resource path="res://Script/Block.gd" type="Script" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 30.4153, 30.2056 )
+
+[node name="Block" type="Area2D"]
+script = ExtResource( 3 )
+
+[node name="Population" type="Label" parent="."]
+margin_left = -32.0
+margin_top = -32.0
+margin_right = 32.0
+margin_bottom = 32.0
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Color" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+
+[node name="Click" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource( 1 )
+[connection signal="input_event" from="." to="." method="_on_Block_input_event"]

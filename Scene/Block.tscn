@@ -1,8 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Assets/Font/font.tres" type="DynamicFont" id=1]
 [ext_resource path="res://Assets/white.png" type="Texture" id=2]
 [ext_resource path="res://Script/Block.gd" type="Script" id=3]
+[ext_resource path="res://Assets/attackHighlight.png" type="Texture" id=4]
+[ext_resource path="res://Assets/moveHighlight.png" type="Texture" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 30.4153, 30.2056 )
@@ -24,8 +26,18 @@ __meta__ = {
 
 [node name="Color" type="Sprite" parent="."]
 texture = ExtResource( 2 )
+centered = false
 
 [node name="Click" type="CollisionShape2D" parent="."]
 visible = false
 shape = SubResource( 1 )
+
+[node name="MoveHighlight" type="Sprite" parent="."]
+visible = false
+position = Vector2( -0.0884399, 0 )
+texture = ExtResource( 5 )
+
+[node name="AtkHighlight" type="Sprite" parent="."]
+visible = false
+texture = ExtResource( 4 )
 [connection signal="input_event" from="." to="." method="_on_Block_input_event"]

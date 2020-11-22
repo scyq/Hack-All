@@ -19,6 +19,10 @@ config/name="Hack All"
 run/main_scene="res://Scene/Main.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+Race="*res://Script/Race.gd"
+
 [display]
 
 window/size/width=1920

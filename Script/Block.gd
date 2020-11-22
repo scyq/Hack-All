@@ -1,9 +1,9 @@
 extends Area2D
 
+var hasRace : bool = false
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+
+# sub root
 
 
 # Called when the node enters the scene tree for the first time.
@@ -15,7 +15,10 @@ func _ready():
 #func _process(delta):
 #	pass
 
+	
 
+# warning-ignore:unused_argument
+# warning-ignore:unused_argument
 func _on_Block_input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton:
 		if event.button_index == BUTTON_LEFT and event.pressed:

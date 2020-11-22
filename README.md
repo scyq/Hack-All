@@ -19,3 +19,11 @@
 5. 异灵
 
 ### 游戏回合
+
+
+
+
+
+### 数值计算
+
+Damage = Population * Attack * (1 - $enemy.Defend)
